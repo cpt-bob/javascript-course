@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 9 Exercises</title>
+  </head>
+  <body>
+    <button>9a</button>
+    <button class="js-button2">9b</button>
+
+    <button onclick="choice('heads')">heads</button>
+    <button onclick="choice('tails')">tails</button>
+    <p class="js-choice"></p>
+    <br />
+    <br />
+    <input
+      class="js-name-input"
+      placeholder="Name"
+      type="text"
+      onkeydown="handleGetNameKeydown(event)"
+    />
+    <button onclick="getName()">Submit</button>
+    <p class="js-name-print"></p>
+    <script>
+      function choice(choice) {
+        if (choice === "heads") {
+          document.querySelector(".js-choice").innerHTML = "You chose: heads";
+        } else {
+          document.querySelector(".js-choice").innerHTML = "You chose: tails";
+        }
+      }
+
+      function getName() {
+        const inputElement = document.querySelector(".js-name-input");
+        let name = inputElement.value;
+
+        document.querySelector(
+          ".js-name-print"
+        ).innerHTML = `Your name is: ${name}`;
+      }
+
+      function handleGetNameKeydown(event) {
+        if (event.key === "Enter") {
+          getName();
+        }
+      }
+
+      console.log(document.querySelector("button"));
+      document.querySelector(".js-button2").innerHTML = "9b done!";
+    </script>
+  </body>
+</html>

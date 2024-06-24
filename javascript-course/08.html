@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects Exercises</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: "basketball",
+        price: 2095,
+      };
+
+      product.price += 500;
+      product["delivery-time"] = "3 days";
+
+      console.log(product);
+
+      const product1 = {
+        name: "Kimber Raptor II 1911",
+        price: 167000,
+      };
+
+      const product2 = {
+        name: "Sig P365-XMACRO",
+        price: 66999,
+      };
+
+      const product3 = {
+        name: "Walther PDP",
+        price: 64900,
+      };
+
+      const product4 = {
+        name: "Sig P365-XMACRO",
+        price: 66999,
+      };
+
+      console.log(product1, product2, product3, product4);
+
+      function comparePrice(value1, value2, value3) {
+        if (value1.price < value2.price && value1.price < value3.price) {
+          console.log(`The cheaper gun is ${product1.name}`);
+        } else if (value2.price < value3.price && value2.price < value1.price) {
+          console.log(`The cheaper gun is ${product2.name}`);
+        } else if (value3.price < value1.price && value3.price < value2.price) {
+          console.log(`The cheaper gun is ${product3.name}`);
+        }
+      }
+
+      comparePrice(product1, product2, product3);
+
+      function isSameProduct(value1, value2) {
+        if (value1.name === value2.name && value1.price === value2.price) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      console.log(isSameProduct(product1, product2));
+      console.log(isSameProduct(product2, product3));
+      console.log(isSameProduct(product3, product4));
+      console.log(isSameProduct(product1, product3));
+      console.log(isSameProduct(product2, product4));
+
+      console.log("Good Morning".toLowerCase());
+      console.log("test".repeat(2));
+    </script>
+  </body>
+</html>

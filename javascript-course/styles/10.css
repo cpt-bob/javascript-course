@@ -1,0 +1,43 @@
+.add-to-cart-button {
+  background-color: rgb(255, 216, 20);
+  padding: 6px 30px;
+  border: none;
+  border-radius: 50px;
+  font-family: Arial;
+  margin-right: 100px;
+}
+
+.request-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.schedule-button {
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgb(230, 230, 230);
+  border: none;
+  margin-bottom: 100px;
+}
+
+.test-button {
+  margin-bottom: 100px;
+}
+
+.toggle-button {
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.is-toggled {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12 Exersices</title>
+  </head>
+  <body>
+    <!-- <button class="js-start-button">Start</button> -->
+    <button class="js-add-to-cart-button">Add to cart</button>
+    <p class="js-added"></p>
+    <script>
+      // let add = function () {
+      //   console.log(2 + 3);
+      // };
+
+      // function runTwice(fun) {
+      //   console.log(fun);
+      //   console.log(fun);
+      // }
+
+      // runTwice(function () {
+      //   console.log("12b");
+      // });
+
+      // runTwice(add);
+
+      // function toggle() {
+      //   const button = document.querySelector(".js-start-button");
+
+      //   setTimeout(function () {
+      //     button.innerHTML = "Finished!";
+      //   }, 1000);
+      //   button.innerHTML = "Loading...";
+      // }
+
+      // function toggle() {
+
+      //   document.querySelector(".js-added").innerHTML = "Added";
+
+      //   setTimeout(function () {
+      //     document.querySelector(".js-added").innerHTML = "";
+      //   }, 2000);
+      // }
+
+      // let timeout;
+
+      // function toggle() {
+      //   const messageElement = document.querySelector(".js-added");
+      //   messageElement.innerHTML = "Added";
+
+      //   clearTimeout(timeout);
+
+      //   timeout = setTimeout(function () {
+      //     messageElement.innerHTML = "";
+      //   }, 2000);
+      // }
+
+      // const muliply = (value1, value2) => {
+      //   return value1 * value2;
+      // };
+      // console.log(muliply(2, 3));
+      // console.log(muliply(7, 10));
+
+      // function countPositive(nums) {
+      //   let positiveNumbers = 0;
+
+      //   nums.forEach((num) => {
+      //     if (num > 0) {
+      //       positiveNumbers++;
+      //     }
+      //   });
+      //   return positiveNumbers;
+      // }
+
+      // console.log(countPositive([1, -3, 5]));
+      // console.log(countPositive([-2, 3, -5, 7, 10]));
+
+      // function addNum(array, num) {
+      //   return array.map((value) => value + num);
+      // }
+      // console.log(addNum([1, 2, 3], 2));
+      // console.log(addNum([-2, -1, 0, 99], 2));
+
+      // function removeEgg(foods) {
+      //   let eggsRemoved = 0;
+      //   return foods.filter((food) => {
+      //     if (food === "egg" && eggsRemoved < 2) {
+      //       eggsRemoved++;
+      //       return false;
+      //     }
+      //     return true;
+      //   });
+      // }
+      // console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+
+      // document
+      //   .querySelector(".js-start-button")
+      //   .addEventListener("click", () => {
+      //     const button = document.querySelector(".js-start-button");
+
+      //     setTimeout(() => {
+      //       button.innerHTML = "Finished!";
+      //     }, 1000);
+      //     button.innerHTML = "Loading...";
+      //   });
+
+      document
+        .querySelector(".js-add-to-cart-button")
+        .addEventListener("click", () => {
+          let timeout;
+          const messageElement = document.querySelector(".js-added");
+          messageElement.innerHTML = "Added";
+
+          clearTimeout(timeout);
+
+          timeout = setTimeout(() => {
+            messageElement.innerHTML = "";
+          }, 2000);
+        });
+    </script>
+  </body>
+</html>

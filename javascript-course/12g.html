@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+  </head>
+  <body>
+    <button onclick="messages++">Add</button>
+    <button onclick="removeMessage()">Remove</button>
+    <script>
+      let messages = 0;
+
+      setInterval(function () {
+        console.log(messages);
+
+        if (document.title === "App" && messages > 0) {
+          document.title = `(${messages}) New messages`;
+        } else {
+          document.title = "App";
+        }
+      }, 1000);
+
+      function removeMessage() {
+        if (messages > 0) {
+          messages--;
+        } else {
+          alert("Messages can not go below 0");
+        }
+        console.log(messages);
+      }
+    </script>
+  </body>
+</html>
